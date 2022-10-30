@@ -117,3 +117,10 @@ row {
 .card-header {
   font-size: 20px;
 }
+
+.git {
+  margin: 0 auto;
+  display: block;
+  color: #fff;
+  text-align: center;
+}
