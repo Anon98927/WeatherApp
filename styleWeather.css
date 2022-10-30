@@ -1,0 +1,126 @@
+body {
+  border: 200px solid #fff;
+  margin: 0px;
+  padding: 100px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 107, 141) 0%,
+    rgb(0, 69, 91) 90%
+  );
+  box-shadow: 10px 5px 5px #006382;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+h1,
+h3,
+p {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  right: -90px;
+  top: 60px;
+  color: #fff;
+}
+img {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: -100px;
+  left: 170px;
+  width: 250px;
+}
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-weight: lighter;
+  padding: 0;
+}
+
+form {
+  display: block;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+div {
+  text-align: center;
+  margin: auto;
+}
+row {
+  display: block;
+  margin: 0 auto;
+}
+
+.card-header {
+  font-size: 20px;
+}
+body {
+  border: 200px solid #fff;
+  margin: 0px;
+  padding: 100px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 107, 141) 0%,
+    rgb(0, 69, 91) 90%
+  );
+  box-shadow: 10px 5px 5px #006382;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+h1,
+h3,
+p {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  right: -90px;
+  top: 60px;
+  color: #fff;
+}
+img {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: -100px;
+  left: 170px;
+  width: 250px;
+}
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-weight: lighter;
+  padding: 0;
+}
+
+form {
+  display: block;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+div {
+  text-align: center;
+  margin: auto;
+}
+row {
+  display: block;
+  margin: 0 auto;
+}
+
+.card-header {
+  font-size: 20px;
+}
