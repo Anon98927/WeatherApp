@@ -24,14 +24,7 @@ p {
   top: 60px;
   color: #fff;
 }
-img {
-  display: block;
-  margin: auto;
-  position: relative;
-  top: -100px;
-  left: 170px;
-  width: 250px;
-}
+
 h1 {
   font-size: 50px;
 }
