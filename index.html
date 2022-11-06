@@ -23,11 +23,13 @@
         </ul>
         <div class="row">
           <div class="col-md-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
-              alt="foggy"
-            />
-            43&deg F | &deg C
+            <div class="d-flex weather-image">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
+                alt="foggy"
+                class="float-left"
+              /><strong>43</strong><small class="units">&deg F | &deg C</small>
+            </div>
           </div>
           <div class="col-md-6">
             <ul>
@@ -37,10 +39,10 @@
             </ul>
           </div>
         </div>
-        <a href="https://github.com/Anon98927/WeatherApp" target="_blank"
-          >Open-source code </a
-        >Coded by Michelle
       </div>
+      <a href="https://github.com/Anon98927/WeatherApp" target="_blank"
+        >Open-source code </a
+      >Coded by Michelle
     </div>
     <link rel="stylesheet" href="src/weather.js" />
     <script
