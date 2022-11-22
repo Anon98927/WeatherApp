@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styleWeather.css" />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <title>Weather App</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styleWeather.css" />
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app">
-        <h1>Dublin</h1>
+        <h1 id="city"></h1>
         <ul>
           <li>Thu 8:00</li>
-          <li>Clear</li>
+          <li id="description"></li>
         </ul>
         <div class="row">
           <div class="col-md-6">
@@ -29,15 +29,14 @@
                 src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
                 alt="foggy"
                 class="float-left"
-              /><strong>43</strong
+              /><strong id="temperature"></strong
               ><small class="units">&deg F | <a href="#">&deg C</a></small>
             </div>
           </div>
           <div class="col-md-6">
             <ul>
-              <li>Precipitation: 3%</li>
-              <li>Humidity: 92%</li>
-              <li>Wind 1mph</li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind <span id="wind"></span>mph</li>
             </ul>
           </div>
         </div>
