@@ -28,15 +28,20 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-night.png`
+  );
 }
 
-let apiKey = "7e977d5c64e3857ddc3fd8233d003772";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=imperial`;
+let apiKey = "8d8ao5811a6ca93e374dtf80f76cb0a5";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=New York&key=${apiKey}`;
 
 axios.get(apiUrl).then(displayTemperature);
