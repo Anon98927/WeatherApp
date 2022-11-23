@@ -70,11 +70,12 @@ function showFarenheit(event) {
 
 function showCelsius(event) {
   event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
 
   celsius.classList.remove("active");
   farenheit.classList.add("active");
 
-  let temperatureElement = document.querySelector("#temperature");
+  let celsiusTemp = ((farenheitTemp - 32) * 5) / 9;
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
@@ -87,6 +88,6 @@ let farenheit = document.querySelector("#farenheit");
 farenheit.addEventListener("click", showFarenheit);
 
 let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showcelsius);
+celsius.addEventListener("click", showCelsius);
 
-search("paris");
+search("New York");
