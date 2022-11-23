@@ -59,7 +59,7 @@ function search(city) {
 
 function showFarenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temprerature");
+  let temperatureElement = document.querySelector("#temperature");
 
   farenheit.classList.remove("active");
   celsius.classList.add("active");
@@ -74,7 +74,7 @@ function showCelsius(event) {
   celsius.classList.remove("active");
   farenheit.classList.add("active");
 
-  let temperatureElement = document.querySelector("#temprerature");
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
