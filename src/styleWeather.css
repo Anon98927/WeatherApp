@@ -18,6 +18,16 @@ h1 {
   margin-bottom: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  cursor: default;
+  color: rgb(26, 100, 214);
+}
+
 .sourceCode {
   max-width: 600px;
 }
@@ -26,6 +36,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   margin: 0;
   padding: 0;
