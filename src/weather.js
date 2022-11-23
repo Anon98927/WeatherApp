@@ -37,11 +37,24 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/shower-rain-night.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
-let apiKey = "XXXXXXXXXXXXXXXXXXXXXXXX";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=New York&key=${apiKey}`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "7e977d5c64e3857ddc3fd8233d003772";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+search("paris");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
