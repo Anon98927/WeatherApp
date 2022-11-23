@@ -42,6 +42,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function handleSubmit(event) {
@@ -90,4 +91,4 @@ farenheit.addEventListener("click", showFarenheit);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
-search("New York");
+search("Lisbon");
