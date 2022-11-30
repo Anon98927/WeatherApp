@@ -53,30 +53,28 @@ function handleSubmit(event) {
 
 function search(city) {
   let apiKey = "7e977d5c64e3857ddc3fd8233d003772";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function showFarenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  farenheit.classList.remove("active");
-  celsius.classList.add("active");
-
-  let farenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheitTemp);
-}
-
-function showCelsius(event) {
+function displayFarenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
 
   celsius.classList.remove("active");
   farenheit.classList.add("active");
 
-  let celsiusTemp = ((farenheitTemp - 32) * 5) / 9;
+  let farenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheitTemp);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  farenheit.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
@@ -86,9 +84,9 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let farenheit = document.querySelector("#farenheit");
-farenheit.addEventListener("click", showFarenheit);
+farenheit.addEventListener("click", displayFarenheitTemp);
 
 let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showCelsius);
+celsius.addEventListener("click", displayCelsiusTemp);
 
-search("Lisbon");
+search("New York");

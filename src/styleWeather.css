@@ -18,14 +18,13 @@ h1 {
   margin-bottom: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-a:hover {
+.weather-temp .active {
+  color: black;
   cursor: default;
-  color: rgb(26, 100, 214);
+  text-decoration: none;
+}
+.weather-temp .active:hover {
+  text-decoration: none;
 }
 
 .sourceCode {
