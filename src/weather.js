@@ -112,28 +112,6 @@ function search(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function displayFarenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsius.classList.remove("active");
-  farenheit.classList.add("active");
-
-  let farenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheitTemp);
-}
-
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  celsius.classList.add("active");
-  farenheit.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-
-  temperatureElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
