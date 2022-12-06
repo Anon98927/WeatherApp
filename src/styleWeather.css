@@ -32,15 +32,6 @@ h1 {
   opacity: 0.6;
 }
 
-.weather-temp .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
-}
-.weather-temp .active:hover {
-  text-decoration: none;
-}
-
 .sourceCode {
   max-width: 600px;
 }
